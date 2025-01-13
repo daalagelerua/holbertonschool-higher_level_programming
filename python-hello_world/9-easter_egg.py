@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print(open("texte.txt").read())
+print(open("texte.txt").read().rstrip("\n"))
