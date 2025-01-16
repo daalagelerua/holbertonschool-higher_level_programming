@@ -2,6 +2,6 @@
 # version compact: print(", ".join(f"{i:02}" for i in range(100)))
 for i in range(100):
     if i < 99:
-        print("{:02}".format(i), end=", ")
+        print("{:02d}".format(i), end=", ")
     else:
-        print(i)
+        print("{:02d)"format(i))
