@@ -5,11 +5,11 @@ argv = sys.argv[1:]
 argc = len(argv)
 
 if argc == 0:
-    print(f"{argc} arguments.")
+    print("{} arguments.".format(argc))
 elif argc == 1:
-    print(f"{argc} argument:")
+    print("{} argument:".format(argc))
 else:
-    print(f"{argc} arguments:")
+    print("{} arguments:".format(argc))
 
 for i in range(argc):
-    print(f"{i + 1}: {argv[i]}")
+    print("{}: {}".format(i + 1, argv[i]))
