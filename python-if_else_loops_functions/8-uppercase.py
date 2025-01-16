@@ -6,4 +6,4 @@ def uppercase(str):
             result += chr(ord(char) - 32)  # transforme en MAJ, stock dans res
         else:
             result += char  # sinon stock direct dans result
-    print(result)
+    print("{}".format(result))
