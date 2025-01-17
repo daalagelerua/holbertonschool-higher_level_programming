@@ -1,2 +1,4 @@
 # holbertonschool-higher_level_programming
-starting with python !
+Starting with Python !
+
+This project is about discovering the syntax in Python3
