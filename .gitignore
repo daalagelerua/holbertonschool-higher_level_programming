@@ -1,0 +1,24 @@
+# Ignorer le dossier __pycache__
+__pycache__/
+
+# Ignorer les fichiers .pyc (bytecode Python)
+*.pyc
+
+# Ignorer les fichiers de configuration locaux
+.env
+.env.local
+
+# Ignorer les fichiers de dépendances Python
+venv/
+.env/
+*.egg-info/
+dist/
+build/
+
+# Ignorer les fichiers de l'IDE (par exemple, VSCode)
+.vscode/
+.idea/
+
+# Ignorer les fichiers de système d'exploitation
+.DS_Store
+Thumbs.db
