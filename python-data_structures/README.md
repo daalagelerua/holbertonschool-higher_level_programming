@@ -1,4 +1,4 @@
-# Python - Data Strctures: Lists, Tuples
+# Python - Data Structures: Lists, Tuples
 
 ## What are lists and how to use them ? :
 **Lists** are ordered, mutable collections of items in Python. They can contain elements of different types, including other lists. Lists are defined using square brackets `[]`.
