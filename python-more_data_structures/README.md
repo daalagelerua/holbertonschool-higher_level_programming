@@ -93,8 +93,10 @@ print(my_dict["name"])  # Output: Alice
 <ins>**Use Dictionaries:**</ins>
 - When you need to store data as key-value pairs.
 - When you need fast lookups by key.
-**Use Lists:**
+
+<ins>**Use Lists:**</ins>
 - When you need ordered, indexed data.
+
 <ins>**Use Sets:**</ins>
 - When you need to store unique elements and perform set operations.
 
