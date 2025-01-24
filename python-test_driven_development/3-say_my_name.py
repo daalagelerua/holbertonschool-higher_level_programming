@@ -3,7 +3,6 @@
 This module defines a function to print 'My name is'
 
 The function `say_my_name` takes 2 strings as arguments
-and returns 
 '''
 
 
