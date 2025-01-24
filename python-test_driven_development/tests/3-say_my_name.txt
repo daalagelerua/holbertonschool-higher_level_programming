@@ -4,7 +4,7 @@ Traceback (most recent call last):
     ...
 NameError: name 'alphonse' is not defined
 >>> say_my_name("alphonse", "brown")
-MY name is alphonse brown
+My name is alphonse brown
 >>> say_my_name("alphonse", 2)
 Traceback (most recent call last):
     ...
