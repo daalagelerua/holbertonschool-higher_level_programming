@@ -1,0 +1,19 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name(alphonse, brown)
+Traceback (most recent call last):
+    ...
+NameError: name 'alphonse' is not defined
+>>> say_my_name("alphonse", "brown")
+MY name is alphonse brown
+>>> say_my_name("alphonse", 2)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+>>> say_my_name(2, "alphonse")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+>>> say_my_name("2", "alphonse", "def")
+Traceback (most recent call last):
+    ...
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
