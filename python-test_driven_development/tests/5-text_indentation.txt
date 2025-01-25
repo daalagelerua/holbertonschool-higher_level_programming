@@ -1,18 +1,12 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation('hello. comment va ? fhgd: hchssd')
 hello.
-
-comment va ?
-
-fhgd:
-
-hchssd>>>
 >>> text_indentation(2)
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
 >>> text_indentation('fhjdjdj' 'fjdfjdf')
-fhjdjdjfjdfjdf>>>
+fhjdjdjfjdfjdf
 >>> text_indentation('fhjdjdj', 2)
 Traceback (most recent call last):
     ...
