@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """
-This module defines a function to print a square. 
-
 This function `print_square` take an integer,
 and print a square of length 'size' made of '#' .
 """
