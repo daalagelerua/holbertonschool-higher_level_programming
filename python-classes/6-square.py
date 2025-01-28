@@ -12,7 +12,7 @@ class Square:
         size (int): The size of the square's side.
     """
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """
         Initializes a square with optonal size
 
@@ -25,6 +25,7 @@ class Square:
         """
 
         self.__size = size
+        self.__position = position
         
         
     def area(self):
@@ -59,7 +60,7 @@ class Square:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
+        self.size = value
 
     def my_print(self):
         """
@@ -67,10 +68,40 @@ class Square:
 
         Parameters:
         size: length of the square.
+        if size is 0, print an empty line
+        The position is respected by adding spaces and empty lines.
         """
 
         if self.size == 0:
             print()
-        else:
-            for i in range(self.size):
-                print("{}".format('#' * self.size))
+        print("\n" * self.position[1], end="")
+        
+        for _ in range(self.size):
+            print(" " * self.position[0] + '#' * self.size)
+
+    @property
+    def position(self):
+        """
+        getter for the position of the square.
+
+        returns:
+            tuple: The current position of the square.
+        """
+        return self.__position
+    
+    @position.setter
+    def position(self, value):
+        """
+        setter for the position of the square.
+
+        Args:
+            value (tuple): A tuple of 2 positive integers 
+            representing the position.
+
+        Raises:
+            TypeError: if value is not a tuple of 2 positive integers.
+        """
+        if (not isinstance(value, tuple) or len(value) != 2 \
+            or not all(isinstance(num, int) and num >= 0 for num in value)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value

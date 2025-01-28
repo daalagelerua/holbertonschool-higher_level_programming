@@ -4,7 +4,7 @@ This module defines the Square class.
 """
 
 
-class square:
+class Square:
     """
      A class that defines a square.
 
@@ -59,4 +59,4 @@ class square:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-        self.size = value
+        self.__size = value
