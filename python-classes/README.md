@@ -3,7 +3,7 @@
 ## What is OOP :
 
 **OOP (Object-Oriented Programming)** is a programming paradigm that organizes
-software design around **objects** and ** classes**. It emphasizes concepts like:
+software design around **objects** and **classes**. It emphasizes concepts like:
 
 - **Encapsulation**:
 Bundling data (attributes) and methods (functions) that operate on the data int a single unit (class).
