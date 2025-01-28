@@ -24,8 +24,8 @@ class Square:
             ValueError: if size is less than 0
         """
 
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """
@@ -59,22 +59,21 @@ class Square:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-        self.size = value
+        self.__size = value
 
     def my_print(self):
         """
         Print a square.
 
-        Parameters:
-        size: length of the square.
         if size is 0, print an empty line
         The position is respected by adding spaces and empty lines.
         """
 
         if self.size == 0:
             print()
-        print("\n" * self.position[1], end="")
+            return
 
+        print("\n" * self.position[1], end="")
         for _ in range(self.size):
             print(" " * self.position[0] + '#' * self.size)
 
