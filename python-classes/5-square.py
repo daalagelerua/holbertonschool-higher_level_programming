@@ -25,21 +25,20 @@ class Square:
         """
 
         self.__size = size
-        
-        
+
     def area(self):
         """
-        This function returns the area of a square 
-        """    
+        This function returns the area of a square
+        """
         return self.__size ** 2
-    
+
     @property
     def size(self):
         """
         Getter the size of the square
 
         Returns:
-            int: the size of the square 
+            int: the size of the square
         """
         return self.__size
 

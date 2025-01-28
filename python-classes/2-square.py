@@ -17,9 +17,9 @@ class Square:
 
     Attributes: The class 'square' takes a private attribute 'size'
     size must be a positive integer.
-    """    
+    """
     def __init__(self, size=0):
-        """This function initializes a square with optional size 
+        """This function initializes a square with optional size
 
         Args:
             size (int, optional): size of a square. Defaults to 0.
@@ -34,4 +34,3 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        
