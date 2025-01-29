@@ -14,7 +14,7 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """
-        Initializes a square with optonal size
+        Initializes a square with optional size
 
         Args:
             size (int, optional): size of the square. Defaults to 0.
@@ -36,7 +36,7 @@ class Square:
     @property
     def size(self):
         """
-        Getter the size of the square
+        Getter for the size of the square
 
         Returns:
             int: the size of the square
