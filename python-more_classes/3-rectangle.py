@@ -98,5 +98,14 @@ def perimeter(self):
     
 def __str__(self):
     """
-    
+    This function retruns the rectangle with #.
     """
+
+    rectangle_str = ""
+    if self.__width == 0 or self.__height == 0:
+        return rectangle_str
+    for i in range(self.__height):
+        rectangle_str += ("#" * self.__width)
+        if i not in (self.__height - 1):
+            rectangle_str += "\n"
+    return rectangle_str
