@@ -16,6 +16,8 @@ class Rectangle:
     width: The width of the rectangle.
     height: The height of the rectangle.
     """
+    number_of_instances = 0
+    print_symbol = '#'
     def __init__(self, width=0, height=0):
         """
         Initializes a rectangle of optional width and height.
@@ -24,7 +26,7 @@ class Rectangle:
             width (int, optional): The width of the rectangle. Defaults to 0.
             height (int, optional): The height of the rectangle. Defaults to 0.
         """
-
+        number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -111,7 +113,7 @@ def __str__(self):
     if self.__width == 0 or self.__height == 0:
         return rectangle_str
     for i in range(self.__height):
-        rectangle_str += ("#" * self.__width)
+        rectangle_str += (self.print_symbol * self.__width)
         if i not in (self.__height - 1):
             rectangle_str += "\n"
     return rectangle_str
@@ -122,3 +124,12 @@ def __repr__(self):
     This function returns a string representation of the rectangle.
     """
     return f"Rectangle({self.__width}.{self.__height})"
+
+
+def __del__(self):
+    """
+    This function delete the rectangle.
+    """
+    number_of_instances -= 1
+    print(f"Bye rectangle...")
+    
