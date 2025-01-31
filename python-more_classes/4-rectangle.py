@@ -105,9 +105,8 @@ def perimeter(self):
 
 def __str__(self):
     """
-    This function retruns the rectangle with #.
+    This function returns the rectangle with #.
     """
-
     rectangle_str = ""
     if self.__width == 0 or self.__height == 0:
         return rectangle_str
@@ -116,3 +115,10 @@ def __str__(self):
         if i not in (self.__height - 1):
             rectangle_str += "\n"
     return rectangle_str
+
+
+def __repr__(self):
+    """
+    This function returns a string representation of the rectangle.
+    """
+    return f"Rectangle({self.__width}.{self.__height})"
