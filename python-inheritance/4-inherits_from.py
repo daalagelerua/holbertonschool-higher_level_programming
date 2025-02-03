@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def inherits_from(obj, a_class):
     """
-    This function checks if an object is an 
+    This function checks if an object is an
     instance directly or indirectly of a specified class
     Args:
         obj (): object

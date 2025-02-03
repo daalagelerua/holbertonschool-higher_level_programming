@@ -2,6 +2,8 @@
 """
 This is a class that define a function area
 """
+
+
 class BaseGeometry:
     """
     This class has a function

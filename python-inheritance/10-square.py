@@ -1,6 +1,7 @@
 #!/usr/bin/Python3
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """
     this class define a square that inherits from the class rectangle
@@ -34,4 +35,3 @@ class Square(Rectangle):
         Return a formal string representation of the object.
         """
         return f"Rectangle({self.__size}, {self.__size})"
-    
