@@ -34,10 +34,4 @@ class Square(Rectangle):
         """
         Return a string representation of the square.
         """
-        return f"[Rectangle] {self.__size} / {self.__size}"
-
-    def __repr__(self):
-        """
-        Return a formal string representation of the object.
-        """
-        return f"Rectangle({self.__size}, {self.__size})"
+        return f"[Square] {self.__size}/{self.__size}"
