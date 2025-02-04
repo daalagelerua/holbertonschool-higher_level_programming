@@ -1,4 +1,9 @@
 #!/usr/bin/Python3
+"""
+This module defines a class that inherits from another class
+"""
+
+
 Rectangle = __import__('9-rectangle').Rectangle
 
 
