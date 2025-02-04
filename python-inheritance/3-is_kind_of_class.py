@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines a function that checks if the object 
+This module defines a function that checks if the object
 is an instance inherited from a class.
 """
 
