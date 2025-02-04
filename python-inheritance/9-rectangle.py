@@ -27,7 +27,6 @@ class Rectangle(BaseGeometry):
             TypeError: If width or height are not integers.
             ValueError: If width or height are less than or equal to 0.
         """
-        # Validate the width and height using integer_validator from BaseGeo
         self.integer_validator("width", width)
         self.integer_validator("height", height)
 
