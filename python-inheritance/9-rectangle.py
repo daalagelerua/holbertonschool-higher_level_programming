@@ -2,8 +2,6 @@
 """
 This module defines a class that inherits from another class
 """
-
-
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
@@ -46,9 +44,3 @@ class Rectangle(BaseGeometry):
         Return a string representation of the rectangle.
         """
         return f"[Rectangle] {self.__width} / {self.__height}"
-
-    def __repr__(self):
-        """
-        Return a formal string representation of the object.
-        """
-        return f"Rectangle({self.__width}, {self.__height})"
