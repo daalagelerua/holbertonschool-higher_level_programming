@@ -1,4 +1,4 @@
-#!/usr/bin/Python3
+#!/usr/bin/python3
 """
 This module defines a class that inherits from another class
 """
