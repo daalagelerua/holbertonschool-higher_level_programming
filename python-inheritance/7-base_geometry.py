@@ -24,7 +24,7 @@ class BaseGeometry:
         Args:
             name (string): name of
             value (int): value
-        
+
         Raises:
             TypeError: If value is not integer
             ValueError: If value is less or equal to 0
