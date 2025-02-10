@@ -60,7 +60,7 @@ file = open('filename', 'mode')
 
 **Common Modes**:
 
-* `\`r\``: Read mode (default).
+* "`r`": Read mode (default).
 * ``w``: Write mode (overwrites existing content).
 * ``a``: Append mode (adds to the end of the file).
 * ``b``: Binary mode (e.g., ``rb`` or ``wb``).
