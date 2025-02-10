@@ -4,4 +4,5 @@ import os
 
 
 def write_file(filename="", text=""):
-    with open("my")
+    with open(filename, "w", encoding="utf-8") as file:
+        return file.write(text)
