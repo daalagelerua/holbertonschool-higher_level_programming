@@ -18,7 +18,7 @@ print("The answer is", 42)  # Output: The answer is 42
 
 **Customazing Output**:
 
-* `sep`: Sspecifies the separator between arguments (default is a space).
+* `sep`: Specifies the separator between arguments (default is a space).
 * `end`: Specifies the end character (default is a new line).
 
 ```python
@@ -28,7 +28,7 @@ print("Python", "is", "awesome", sep="-", end="!\n")
 
 ### Input: `input()`
 
-The `input()` function is used to take user input from the console. It always t=returns the inputs as a string.
+The `input()` function is used to take user input from the console. It always returns the inputs as a string.
 
 <ins>**Example**</ins>:
 
