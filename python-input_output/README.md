@@ -4,7 +4,7 @@ Let’s dive into **Python Input/Output (I/O)**, which is how Python interacts w
 
 ## Standard Input and Output :
 
-### **Output**: `print()`
+### Output: `print()`
 
 The `print()` function is used to display output to the console.
 
@@ -26,7 +26,7 @@ print("Python", "is", "awesome", sep="-", end="!\n")
 # Output: Python-is-awesome!
 ```
 
-### **Input**: `input()`
+### Input: `input()`
 
 The `input()` function is used to take user input from the console. It always t=returns the inputs as a string.
 
@@ -60,7 +60,7 @@ file = open('filename', 'mode')
 
 **Common Modes**:
 
-* ``r``: Read mode (default).
+* `\`r\``: Read mode (default).
 * ``w``: Write mode (overwrites existing content).
 * ``a``: Append mode (adds to the end of the file).
 * ``b``: Binary mode (e.g., ``rb`` or ``wb``).
