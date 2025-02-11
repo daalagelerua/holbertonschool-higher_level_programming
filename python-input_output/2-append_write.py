@@ -2,7 +2,6 @@
 """
 This module appends to a file
 """
-import os
 
 
 def append_write(filename="", text=""):

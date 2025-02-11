@@ -2,7 +2,6 @@
 """
 This module write a file
 """
-import os
 
 
 def write_file(filename="", text=""):

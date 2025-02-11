@@ -2,7 +2,6 @@
 """
 This module read a file
 """
-import os
 
 
 def read_file(filename=""):
