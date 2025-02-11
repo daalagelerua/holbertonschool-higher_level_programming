@@ -2,13 +2,15 @@
 """
 This module defines a class
 """
+
+
 class Student:
     """
     This class defines an object student
     """
     def __init__(self, first_name, last_name, age):
         """
-        This function initializes 
+        This function initializes
         Args:
             first_name (str): first name
             last_name (str): last name
