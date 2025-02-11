@@ -27,7 +27,7 @@ class Student:
             dict: dictionnary
         """
         if isinstance(attrs, list) and all(isinstance(
-            attr, str) for attr in attrs):
+                attr, str) for attr in attrs):
             dict_to_return = {
                 i: self.__dict__.get(i) for i in attrs if self.__dict__.get(i)}
         else:
