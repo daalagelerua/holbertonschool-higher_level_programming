@@ -32,3 +32,5 @@ class Student:
 
         return dict(sorted(dict_to_return.items(), key=lambda x: len(x[0])))
     
+    def reload_from_json(self, json):
+        self.__dict__.update(json)
