@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This module defines 2 function that serializes and
+deserializes data
+"""
 
 import json
 import os
