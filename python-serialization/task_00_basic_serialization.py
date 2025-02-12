@@ -16,11 +16,8 @@ def serialize_and_save_to_file(data, filename):
         data (dict): object
         filename (str): name of file
     """
-    try:
-        with open(filename, "w", encoding="utf-8") as file:
-            json.dump(data, file)
-    except (TypeError, ValueError) as e:
-        print(f"Serialization error: {e}")
+    with open(filename, "w", encoding="utf-8") as file:
+        json.dump(data, file)
 
 
 def load_and_deserialize(filename):
@@ -32,9 +29,5 @@ def load_and_deserialize(filename):
     Returns:
         dict: object
     """
-    try:
-        with open(filename, "r", encoding="utf-8") as file:
-            return json.load(file)
-    except (FileNotFoundError, json.JSONDecodeError) as e:
-        print(f"Error loading file {e}")
-        return None
+    with open(filename, "r", encoding="utf-8") as file:
+        return json.load(file)
