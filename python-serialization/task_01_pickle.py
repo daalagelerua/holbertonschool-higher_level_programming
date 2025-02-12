@@ -40,7 +40,7 @@ class CustomObject:
         try:
             with open(filename, "wb") as file:
                 pickle.dump(self, file)
-        except (OSError, pickle.PickleError):
+        except (pickle.PickleError):
             print("Serialization error")
 
     @classmethod
