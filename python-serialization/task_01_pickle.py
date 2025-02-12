@@ -40,7 +40,7 @@ class CustomObject:
         try:
             with open(filename, "wb") as file:
                 pickle.dump(self, file)
-        except (pickle.PickleError):
+        except (OSError, pickle.PickleError):
             print(f"Serialization error")
 
     @classmethod
@@ -53,5 +53,5 @@ class CustomObject:
         try:
             with open(filename, "rb") as file:
                 return pickle.load(file)
-        except (FileNotFoundError, pickle.PickleError):
+        except (FileNotFoundError, pickle.PickleError, EOFError):
             return None
