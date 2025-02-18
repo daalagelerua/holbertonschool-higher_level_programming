@@ -90,6 +90,13 @@ Send data using `httpie`.
 http POST https://api.example.com/data name="John" age=30
 ```
 
+**Hints**:
+
+- The -I flag in curl fetches only the headers of the response, which can be useful to diagnose server settings, cache controls, content type, and more.
+- With the -X flag, you can specify an HTTP method for your request. For example, -X POST will make a POST request.
+- The -d flag allows you to pass data in your request. In RESTful APIs, this is commonly used with POST, PUT, or PATCH requests to send data to the server.
+- If you’re getting a lot of output and want to view it in a more organized way, consider piping the output to a tool like jq for JSON formatting and highlighting.
+
 **API Consumption with Python**:
 
 Python provides librairy like `requests` to interact with AOIs programmatically.
