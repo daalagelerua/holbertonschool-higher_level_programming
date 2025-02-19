@@ -6,7 +6,13 @@ import json
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        if self.path == "/data":
+        if self.path == "/":
+            self.send_response(200)
+            self.send_header("Content-Type", "text/plain")
+            self.end_headers()
+            self.wfile.write(b"Hello, this is a simple API!")
+
+        elif self.path == "/data":
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
@@ -23,11 +29,19 @@ class handler(BaseHTTPRequestHandler):
             self.end_headers()
             status_data = {"status": "OK"}
             self.wfile.write(json.dumps(status_data).encode())
-            
+
+        elif self.path == "/info":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+
+            info = {"version": "1.0", "description": "A simple API built with http.server"}
+            self.wfile.write(json.dumps(info).encode())
+
         else:
             self.send_response(404)
             self.end_headers()
-            self.wfile.write(b"Not Found")
+            self.wfile.write(b"Endpoint not found")
 
 server = HTTPServer(("localhost", 8000), handler)
 server.serve_forever()
