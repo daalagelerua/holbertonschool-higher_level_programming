@@ -36,6 +36,10 @@ def add_user():
     if username in users:
         return jsonify({"error": "User already exists"}), 409
     
+    required_fields = {"name", "age", "city"}
+    if not required_fields.issubset(data):
+        return jsonify({"error":
+                        "Missing required fields (name, age, city)"}), 400
     new_user = {
         username: {
             key: value for key, value in data.items() if key != "username"}}
