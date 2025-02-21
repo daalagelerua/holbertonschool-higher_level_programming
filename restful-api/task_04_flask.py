@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-from flask import Flask, request
-from flask import jsonify
+from flask import Flask, request, jsonify
 from markupsafe import escape
 
 
@@ -17,7 +16,7 @@ def home():
 
 @app.route('/data')
 def data():
-    return jsonify(users)
+    return jsonify(list(users.keys()))
 
 
 @app.route('/status')
