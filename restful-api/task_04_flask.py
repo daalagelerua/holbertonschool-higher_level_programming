@@ -49,7 +49,8 @@ def add_user():
     }
 
     users.update(new_user)
-    return jsonify(new_user[username]), 201
+    return jsonify({"message": "User added",
+                    "user": new_user[username]}), 201
 
 
 @app.route('/users/<username>')
