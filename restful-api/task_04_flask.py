@@ -55,10 +55,9 @@ def add_user():
 
 @app.route('/users/<username>')
 def get_user(username):
-    user_data = users.get(escape(username))
-    if user_data:
-        return jsonify({"username": username, **user_data})
-    return jsonify({"error": "User not found"}), 404
+    if username not in users:
+        return jsonify({"error": "User not found"}), 404
+    return jsonify(users[username])
 
 
 if __name__ == "__main__":
