@@ -25,31 +25,20 @@ def status():
 
 @app.route("/add_user", methods=['POST'])
 def add_user():
-    data = request.get_json()
-
-    if not data or 'username' not in data:
+    new_user = request.get_json()
+    if 'username' not in new_user:
         return jsonify({"error": "Username is required"}), 400
-
-    username = data.get('username')
-
-    if username in users:
-        return jsonify({"error": "User already exists"}), 409
-
-    required_fields = {"name", "age", "city"}
-    if not required_fields.issubset(data):
-        return jsonify({"error":
-                        "Missing required fields (name, age, city)"}), 400
-    new_user = {
-        username: {
-            "name": data["name"],
-            "age": data["age"],
-            "city": data["city"]
-        }
+    username = new_user['username']
+    users[username] = {
+        "username": new_user.get('username'),
+        "name": new_user.get('name'),
+        "age": new_user.get('age'),
+        "city": new_user.get('city')
     }
-
-    users.update(new_user)
-    return jsonify({"message": "User added",
-                    "user": new_user[username]}), 201
+    return jsonify({
+        "message": "User added",
+        "user": users[username]
+    }), 201
 
 
 @app.route('/users/<username>')
