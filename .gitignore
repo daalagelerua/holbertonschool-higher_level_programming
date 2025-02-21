@@ -22,3 +22,9 @@ build/
 # Ignorer les fichiers de système d'exploitation
 .DS_Store
 Thumbs.db
+
+instance/
+
+.pytest_cache/
+.coverage
+htmlcov/
