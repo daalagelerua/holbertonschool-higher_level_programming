@@ -45,7 +45,7 @@ def add_user():
             key: value for key, value in data.items() if key != "username"}}
     
     users.update(new_user)
-    return jsonify(new_user), 201
+    return jsonify(new_user[username]), 201
 
 
 @app.route('/users/<username>')
