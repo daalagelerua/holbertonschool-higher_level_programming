@@ -19,9 +19,10 @@ users = {
 
 @auth.verify_password
 def verify_password(username, password):
-    if username in users and \
-            check_password_hash(users.get(username), password):
-        return username
+    user = users.get(username)
+    if user and check_password_hash(user['password'], password):
+        return user
+    return None
 
 @app.route('/')
 @auth.login_required
