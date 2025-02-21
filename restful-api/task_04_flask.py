@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 from flask import Flask, request, jsonify
-from markupsafe import escape
 
 
 users = {"jane": {"name": "Jane", "age": 28, "city": "Los Angeles"}}
