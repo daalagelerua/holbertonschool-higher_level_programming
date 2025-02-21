@@ -35,12 +35,6 @@ def verify_password(username, password):
     return None
 
 
-@app.route('/')
-@auth.login_required
-def index():
-    return "Hello, {}!".format(auth.current_user())
-
-
 @app.route("/basic-protected", methods=["GET"])
 @auth.login_required
 def basic_protected():
