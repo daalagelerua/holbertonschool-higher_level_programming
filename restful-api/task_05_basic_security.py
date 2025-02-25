@@ -54,7 +54,7 @@ def login():
     return jsonify({"error": "Invalid credentials"}), 401
 
 
-@app.route("/jwt-protected", methods=["GET"])
+@app.route("/jwt-protected")
 @jwt_required()
 def jwt_protected():
     return "JWT Auth: Access Granted"
@@ -95,4 +95,4 @@ def handle_needs_fresh_token_error(err):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
