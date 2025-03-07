@@ -28,19 +28,19 @@ if __name__ == "__main__":
         db=db_name
     )
 
-# Create a cursor object to execute sql requests and retrieve the results
-cursor = db.cursor()
+    # Create a cursor object to execute sql requests and retrieve the results
+    cursor = db.cursor()
 
-# Execute the query to get the state given as argument
-query = ("SELECT * FROM states WHERE name LIKE BINARY '{}' "
+    # Execute the query to get the state given as argument
+    query = ("SELECT * FROM states WHERE name LIKE BINARY '{}' "
              "ORDER BY id ASC".format(state_name))
-cursor.execute(query)
+    cursor.execute(query)
 
-# Fetch the results, prints a list of tuples (if states is found print it)
-states = cursor.fetchall()
-for state in states:
-    print(state)
+    # Fetch the results, prints a list of tuples (if states is found print it)
+    states = cursor.fetchall()
+    for state in states:
+        print(state)
 
-# Once done, close cursor and connection to db to free ressources
-cursor.close()
-db.close()
+    # Once done, close cursor and connection to db to free ressources
+    cursor.close()
+    db.close()
