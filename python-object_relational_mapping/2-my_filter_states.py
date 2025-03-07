@@ -32,10 +32,8 @@ if __name__ == "__main__":
 cursor = db.cursor()
 
 # Execute the query to get the state given as argument
-query = (
-    "SELECT * FROM states WHERE name LIKE BINARY = '{}'"
-    "ORDER BY id ASC".format(state_name)
-)
+query = ("SELECT * FROM states WHERE name LIKE BINARY '{}' "
+             "ORDER BY id ASC".format(state_name))
 cursor.execute(query)
 
 # Fetch the results, prints a list of tuples (if states is found print it)
