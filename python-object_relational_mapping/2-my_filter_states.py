@@ -1,4 +1,4 @@
-#!usr/bin/pyhton3
+#!usr/bin/python3
 """
 This script lists all states corresponding to
 the given argument
