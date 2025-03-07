@@ -12,9 +12,9 @@ import sys
 if __name__ == "__main__":
     """No execution when imported"""
 
-    user = sys.argv[1],   # User name
-    passwd = sys.argv[2],  # Password
-    db = sys.argv[3]       # Database name
+    username = sys.argv[1],   # User name
+    password = sys.argv[2],  # Password
+    db_name = sys.argv[3]       # Database name
 
     # Connect to MySQL server
     db = MySQLdb.connect(
