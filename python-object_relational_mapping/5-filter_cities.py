@@ -46,9 +46,9 @@ if __name__ == "__main__":
     cursor.execute(query, (state_name,))
 
     # Fetch the results, prints a list separated by comas
-    results = cursor.fetchall()
-    city_names = ",".join(row[0] for row in results)
-    print(city_names)
+    cities = cursor.fetchall()
+    cities_list = [city[0] for city in cities]
+    print(", ".join(cities_list))
 
     # Close the cursor and connection to db to free ressources
     cursor.close()
