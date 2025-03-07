@@ -24,24 +24,28 @@ if __name__ == "__main__":
 
     # Connect to database
     db = MySQLdb.connect(
-        host="localhost", user=mysql_user, passwd=mysql_password, db=db_name)
+        host="localhost",
+        user=mysql_user,
+        passwd=mysql_password,
+        db=db_name
+    )
 
     # Create a cursor object to execute sql requests and retrieve the results
     cursor = db.cursor()
 
     # Execute one request to get cities name with there states
-    query = """
-    SELECT cities.id, cities.name, states.name
-    FROM cities
-    JOIN states ON cities.state_id = states.id
-    ORDER BY cities.id ASC
-    """
+    query = (
+        "SELECT cities.id, cities.name, states.name "
+        "FROM cities "
+        "JOIN states ON cities.state_id = states.id "
+        "ORDER BY cities.id ASC "
+    )
     cursor.execute(query)
 
     # Fetch the results, prints a list of tuples
-    results = cursor.fetchall()
-    for row in results:
-        print(row)
+    cities = cursor.fetchall()
+    for city in cities:
+        print(city)
 
     # Close the cursor and connection to db to free ressources
     cursor.close()
