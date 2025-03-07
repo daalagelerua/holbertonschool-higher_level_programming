@@ -1,42 +1,46 @@
 #!/usr/bin/python3
 """
-This script lists all states with a name starting with 'N' (upper N)
-from the database hbtn_0e_0_usa
+Script that lists all states with a name starting with N (upper N)
+from the database hbtn_0e_0_usa.
 Takes 3 arguments: mysql username, mysql password and database name.
 """
-
-import MySQLdb  # To communicate with MySQL
+import MySQLdb
 import sys
 
 
 if __name__ == "__main__":
-    """No execution when imported"""
-
-    username = sys.argv[1],   # User name
-    password = sys.argv[2],  # Password
-    db_name = sys.argv[3]       # Database name
+    """
+    Main function that will not execute when imported.
+    Lists all states with names starting with N from the database.
+    """
+    # Get MySQL connection parameters from command line arguments
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
 
     # Connect to MySQL server
     db = MySQLdb.connect(
-        host="localhost",  # MySQL server adress (local here)
-        port=3306,  # MySQL default port
-        # Parameters
+        host="localhost",
+        port=3306,
         user=username,
         passwd=password,
         db=db_name
     )
 
-# Create a cursor object to execute sql requests and retrieve the results
-cursor = db.cursor()
+    # Create a cursor object
+    cursor = db.cursor()
 
-# Execute the query to get all states with name starting by 'N'
-cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC;")
+    # Execute the query to get states starting with uppercase 'N' ordered by id
+    query = "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY id ASC"
+    cursor.execute(query, ('N%',))
 
-# Fetch the results prints a list of tuples (each state is a line in the table)
-states = cursor.fetchall()
-for state in states:
-    print(state)
+    # Fetch all the results
+    states = cursor.fetchall()
 
-# Once done, close cursor and connection to db to free ressources
-cursor.close()
-db.close()
+    # Print the results
+    for state in states:
+        print(state)
+
+    # Close cursor and database connection
+    cursor.close()
+    db.close()

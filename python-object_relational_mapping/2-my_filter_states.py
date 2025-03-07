@@ -1,18 +1,21 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """
-This script lists all states corresponding to
-the given argument
+Script that displays all values in the states table of hbtn_0e_0_usa
+where name matches the provided argument.
 Takes 4 arguments: mysql username, mysql password, database name, and state
 name.
 """
-
-import MySQLdb  # To communicate with MySQL
-import sys  # To retrieve the arguments passed to the script
+import MySQLdb
+import sys
 
 
 if __name__ == "__main__":
-    """No execution when imported"""
-
+    """
+    Main function that will not execute when imported.
+    Displays values in states table where name matches the given argument.
+    """
+    # Get MySQL connection parameters and state name from command line
+    # arguments
     username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
@@ -20,27 +23,28 @@ if __name__ == "__main__":
 
     # Connect to MySQL server
     db = MySQLdb.connect(
-        host="localhost",  # MySQL server adress (local here)
-        port=3306,  # MySQL default port
-        # Parameters
+        host="localhost",
+        port=3306,
         user=username,
         passwd=password,
         db=db_name
     )
 
-    # Create a cursor object to execute sql requests and retrieve the results
+    # Create a cursor object
     cursor = db.cursor()
 
-    # Execute the query to get the state given as argument
+    # Execute the query using format
     query = ("SELECT * FROM states WHERE name LIKE BINARY '{}' "
              "ORDER BY id ASC".format(state_name))
     cursor.execute(query)
 
-    # Fetch the results, prints a list of tuples (if states is found print it)
+    # Fetch all the results
     states = cursor.fetchall()
+
+    # Print the results
     for state in states:
         print(state)
 
-    # Once done, close cursor and connection to db to free ressources
+    # Close cursor and database connection
     cursor.close()
     db.close()
