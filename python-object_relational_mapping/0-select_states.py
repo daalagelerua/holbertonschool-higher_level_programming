@@ -2,9 +2,9 @@
 """
 Script that lists all states from the database hbtn_0e_0_usa.
 Takes 3 arguments: mysql username, mysql password and database name.
-""" 
- 
-import MySQLdb # To communicate with MySQL
+"""
+
+import MySQLdb  # To communicate with MySQL
 import sys  # Pour récupérer les arguments passés au script
 
 
@@ -13,8 +13,8 @@ if __name__ == "__main__":
 
     # Connect to MySQL server
     db = MySQLdb.connect(
-        host="localhost", # MySQL server adress (local here)
-        port=3306, # MySQL default port
+        host="localhost",  # MySQL server adress (local here)
+        port=3306,  # MySQL default port
         # Parameters
         user=sys.argv[1],   # User name
         passwd=sys.argv[2],  # Password

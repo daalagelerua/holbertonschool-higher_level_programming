@@ -49,4 +49,3 @@ if __name__ == "__main__":
     # Close the cursor and connection to db to free ressources
     cursor.close()
     db.close()
-    

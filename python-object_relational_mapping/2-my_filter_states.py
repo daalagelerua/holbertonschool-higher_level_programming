@@ -4,7 +4,7 @@ This script lists all states corresponding to
 the given argument
 """
 
-import MySQLdb # To communicate with MySQL
+import MySQLdb  # To communicate with MySQL
 import sys  # To retrieve the arguments passed to the script
 
 
@@ -13,8 +13,8 @@ if __name__ == "__main__":
 
     # Connect to MySQL server
     db = MySQLdb.connect(
-        host="localhost", # MySQL server adress (local here)
-        port=3306, # MySQL default port
+        host="localhost",  # MySQL server adress (local here)
+        port=3306,  # MySQL default port
         # Parameters
         user=sys.argv[1],   # User name
         passwd=sys.argv[2],  # Password
