@@ -26,19 +26,23 @@ if __name__ == "__main__":
 
     # Connect to database
     db = MySQLdb.connect(
-        host="localhost", user=mysql_user, passwd=mysql_password, db=db_name)
+        host="localhost",
+        user=mysql_user,
+        passwd=mysql_password,
+        db=db_name
+    )
 
     # Create a cursor object to execute sql requests and retrieve the results
     cursor = db.cursor()
 
     # Execute one request to get cities name of the given state
-    query = """
-    SELECT cities.name
-    FROM cities
-    JOIN states ON cities.state_id = states.id
-    WHERE states.name = %s
-    ORDER BY cities.id ASC
-    """
+    query = (
+    "SELECT cities.name"
+    "FROM cities"
+    "JOIN states ON cities.state_id = states.id"
+    "WHERE states.name = %s"
+    "ORDER BY cities.id ASC"
+    )
     cursor.execute(query, (state_name,))
 
     # Fetch the results, prints a list separated by comas
