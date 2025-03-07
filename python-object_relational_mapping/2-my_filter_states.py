@@ -18,7 +18,7 @@ if __name__ == "__main__":
         # Parameters
         user=sys.argv[1],   # User name
         passwd=sys.argv[2],  # Password
-        db=sys.argv[3]       # Database name
+        db =sys.argv[3]       # Database name
     )
 
 # Create a cursor object to execute sql requests and retrieve the results
@@ -27,9 +27,9 @@ cursor = db.cursor()
 # Execute the query to get the state given as argument
 state_name = sys.argv[4]  # Name of state will be the fourth argument
 query = (
-    "SELECT * FROM states WHERE name = '{}'"
-    "ORDER BY id ASC"
-).format(state_name)
+    "SELECT * FROM states WHERE name LIKE BINARY = '{}'"
+    "ORDER BY id ASC".format(state_name)
+)
 cursor.execute(query)
 
 # Fetch the results, prints a list of tuples (if states is found print it)

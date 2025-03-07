@@ -25,7 +25,11 @@ if __name__ == "__main__":
 
     # Connect to database
     db = MySQLdb.connect(
-        host="localhost", user=mysql_user, passwd=mysql_password, db=db_name)
+        host="localhost",
+        user=mysql_user,
+        passwd=mysql_password,
+        db=db_name
+    )
 
     # Create a cursor object to execute sql requests and retrieve the results
     cursor = db.cursor()
@@ -35,9 +39,9 @@ if __name__ == "__main__":
     cursor.execute(query, (state_name,))
 
     # Fetch the results, prints a list of tuples
-    results = cursor.fetchall()
-    for row in results:
-        print(row)
+    states = cursor.fetchall()
+    for state in states:
+        print(state)
 
     # Close the cursor and connection to db to free ressources
     cursor.close()
