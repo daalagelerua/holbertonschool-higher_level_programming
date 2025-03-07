@@ -2,6 +2,8 @@
 """
 This script lists all states corresponding to
 the given argument
+Takes 4 arguments: mysql username, mysql password, database name, and state
+name.
 """
 
 import MySQLdb  # To communicate with MySQL
@@ -38,9 +40,8 @@ cursor.execute(query)
 
 # Fetch the results, prints a list of tuples (if states is found print it)
 states = cursor.fetchall()
-if states:
-    for state in states:
-        print(state)
+for state in states:
+    print(state)
 
 # Once done, close cursor and connection to db to free ressources
 cursor.close()
