@@ -3,16 +3,20 @@
 
 def generate_invitations(template, attendees):
     if not isinstance(template, str):
-        raise TypeError("Template must be a string")
+        print("Template must be a string")
+        return
 
     if not isinstance (attendees, list):
-        raise TypeError("Attendees must be a list")
+        print("Attendees must be a list")
+        return
 
     if not template:
-        raise Exception("Template is empty, no output files generated.")
+        print("Template is empty, no output files generated.")
+        return
 
     if not attendees:
-        raise Exception("No data provided, no output files generated.")
+        print("No data provided, no output files generated.")
+        return
         
     # Processing attendees
     for i, attendee in enumerate(attendees, start=1):
